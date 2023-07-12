@@ -9,16 +9,19 @@ const ProjectDetails = ({ match }) => {
   };
 
   return (
-    <div>
-      <h2>Project Details</h2>
-      <h3>{projectData.title}</h3>
-      <p>{projectData.description}</p>
-      <p>Client: {projectData.client}</p>
-      <p>Deadline: {projectData.deadline}</p>
+    <div className="container mx-auto p-4">
+      <h2 className="text-2xl font-bold mb-4">Project Details</h2>
+      <div className="bg-white rounded shadow p-4">
+        <h3 className="text-lg font-semibold mb-2">{projectData.title}</h3>
+        <p className="mb-2">{projectData.description}</p>
+        <p className="text-gray-600">Client: {projectData.client}</p>
+        <p className="text-gray-600">Deadline: {projectData.deadline}</p>
+      </div>
     </div>
   );
 };
 
 export default ProjectDetails;
+
 
 
