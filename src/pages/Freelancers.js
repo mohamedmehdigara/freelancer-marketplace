@@ -1,29 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import FreelancerCard from '../components/FreelancerCard';
+import React from 'react';
+import FreelancerList from '../components/FreelancerList';
 
 const Freelancers = () => {
-  const [freelancers, setFreelancers] = useState([]);
-
-  useEffect(() => {
-    const fetchFreelancers = async () => {
-      try {
-        const response = await axios.get('/api/freelancers');
-        setFreelancers(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchFreelancers();
-  }, []);
-
   return (
     <div>
-      <h2>Freelancers</h2>
-      {freelancers.map((freelancer) => (
-        <FreelancerCard key={freelancer.id} freelancer={freelancer} />
-      ))}
+      <h1>Freelancers Page</h1>
+      <FreelancerList />
     </div>
   );
 };

@@ -1,29 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import ClientCard from '../components/ClientCard';
+import React from 'react';
+import ClientList from '../components/ClientList';
 
 const Clients = () => {
-  const [clients, setClients] = useState([]);
-
-  useEffect(() => {
-    const fetchClients = async () => {
-      try {
-        const response = await axios.get('/api/clients');
-        setClients(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchClients();
-  }, []);
-
   return (
     <div>
-      <h2>Clients</h2>
-      {clients.map((client) => (
-        <ClientCard key={client.id} client={client} />
-      ))}
+      <h1>Clients Page</h1>
+      <ClientList />
     </div>
   );
 };

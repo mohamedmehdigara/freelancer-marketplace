@@ -7,8 +7,6 @@ import Clients from './pages/Clients';
 import ProjectDetails from './pages/ProjectDetails';
 import Profile from './components/Profile';
 import "./App.css";
-import ClientCard from './components/ClientCard';
-import FreelancerCard from './components/FreelancerCard';
 
 
 const App = () => {
@@ -23,8 +21,6 @@ const App = () => {
           <Route exact path="/projectDetails" element={<ProjectDetails/>} />
           <Route exact path="/profile" element={<Profile/>} />
           <Route exact path="/navbar" element={<Navbar/>} />
-          <Route exact path="/freelancerCard" element={<FreelancerCard/>} />
-          <Route exact path="/clientcard" element={<ClientCard/>} />
 
 
 
